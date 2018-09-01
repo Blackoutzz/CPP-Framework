@@ -1,0 +1,4 @@
+#Framework Index
+#Ignore Visual Studio Files
+/.vs/
+/Debug/
