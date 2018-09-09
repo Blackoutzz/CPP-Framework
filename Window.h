@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Included.h"
 
 namespace Software
@@ -65,6 +64,7 @@ namespace Software
 				MARGINS Margin;
 
 				bool FullScreen;
+
 		};
 	}
 }

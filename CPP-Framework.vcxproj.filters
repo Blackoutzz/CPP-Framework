@@ -25,28 +25,58 @@
     <Filter Include="Header Files\Software\Hardware">
       <UniqueIdentifier>{29e4b1f8-5368-472b-b620-459dccd7c949}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Software">
+      <UniqueIdentifier>{6d91bea5-4450-470b-b32c-aeae9280e042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Software\Hardware">
+      <UniqueIdentifier>{68646086-c747-41de-8fdd-85331df96161}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Software\Interface">
+      <UniqueIdentifier>{f05366e6-e4dc-46fb-b5aa-27dd6e499984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Software\Libraries">
+      <UniqueIdentifier>{4db08023-da10-411e-8273-12c4bcddcbb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Github">
+      <UniqueIdentifier>{dc45c384-122c-40a9-a318-902a0ffaf9ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Software\Memory">
+      <UniqueIdentifier>{762294e6-084f-4208-83c4-22b7f050c2a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Software\Memory">
+      <UniqueIdentifier>{ee324f9b-8e25-4f44-8205-f96b72fa6157}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Keyboard.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GDI.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectX9.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Mouse.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VMT.cpp">
+      <Filter>Source Files\Software\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>Source Files\Software\Hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>Source Files\Software\Hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX9.cpp">
+      <Filter>Source Files\Software\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files\Software\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="GDI.cpp">
+      <Filter>Source Files\Software\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\Software\Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Module.cpp">
+      <Filter>Source Files\Software\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Process.cpp">
+      <Filter>Source Files\Software</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -77,17 +107,37 @@
     <ClInclude Include="Included.h">
       <Filter>Header Files\Software</Filter>
     </ClInclude>
-    <ClInclude Include="Software.h">
-      <Filter>Header Files\Software</Filter>
-    </ClInclude>
     <ClInclude Include="Framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="VMT.h">
+      <Filter>Header Files\Software\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Module.h">
+      <Filter>Header Files\Software\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Software.h">
+      <Filter>Header Files\Software\Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Process.h">
+      <Filter>Header Files\Software</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>Header Files\Software\Libraries</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="LICENSE" />
-    <None Include="README.md" />
-    <None Include="CHANGELOG.md" />
-    <None Include=".gitignore" />
+    <None Include=".gitignore">
+      <Filter>Github</Filter>
+    </None>
+    <None Include="CHANGELOG.md">
+      <Filter>Github</Filter>
+    </None>
+    <None Include="LICENSE">
+      <Filter>Github</Filter>
+    </None>
+    <None Include="README.md">
+      <Filter>Github</Filter>
+    </None>
   </ItemGroup>
 </Project>

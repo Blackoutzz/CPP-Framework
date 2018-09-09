@@ -33,6 +33,8 @@
 #include <string.h>
 #include <tchar.h>
 #include "game.h"
+#include <cstdint>
+#include <cstddef>
 
 using namespace Gdiplus;
 using namespace std;
