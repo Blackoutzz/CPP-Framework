@@ -9,5 +9,8 @@ C++ Framework to build easy application and hack for Windows (Visual Studio).
 - Twitter : @Mick4Secure
 - Website : https://Blackoutzz.me
 
+## Contributors
+- Github : @MrEvertide
+
 ## Sponsors/Rep
 - GuidedHacking | https://guidedhacking.com/
