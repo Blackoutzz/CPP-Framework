@@ -1,6 +1,6 @@
 #pragma once
 #include "Included.h"
-#include "Module.h"
+#include "Memory/Module.h"
 
 namespace Software 
 {

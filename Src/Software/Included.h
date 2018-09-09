@@ -32,7 +32,7 @@
 #include <regex>
 #include <string.h>
 #include <tchar.h>
-#include "game.h"
+#include "Libraries/Game.h"
 #include <cstdint>
 #include <cstddef>
 

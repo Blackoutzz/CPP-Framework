@@ -152,33 +152,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DirectX9.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GDI.cpp" />
-    <ClCompile Include="Keyboard.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Module.cpp" />
-    <ClCompile Include="Mouse.cpp" />
-    <ClCompile Include="Process.cpp" />
-    <ClCompile Include="VMT.cpp" />
-    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="Src\Software\Interface\DirectX9.cpp" />
+    <ClCompile Include="Src\Software\Libraries\Game.cpp" />
+    <ClCompile Include="Src\Software\Interface\GDI.cpp" />
+    <ClCompile Include="Src\Software\Hardware\Keyboard.cpp" />
+    <ClCompile Include="Src\Main.cpp" />
+    <ClCompile Include="Src\Software\Memory\Module.cpp" />
+    <ClCompile Include="Src\Software\Hardware\Mouse.cpp" />
+    <ClCompile Include="Src\Software\Process.cpp" />
+    <ClCompile Include="Src\Software\Memory\VMT.cpp" />
+    <ClCompile Include="Src\Software\Interface\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DirectX9.h" />
-    <ClInclude Include="Framework.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="GDI.h" />
-    <ClInclude Include="Hardware.h" />
-    <ClInclude Include="Included.h" />
-    <ClInclude Include="Interface.h" />
-    <ClInclude Include="Keyboard.h" />
-    <ClInclude Include="Memory.h" />
-    <ClInclude Include="Module.h" />
-    <ClInclude Include="Mouse.h" />
-    <ClInclude Include="Process.h" />
-    <ClInclude Include="Software.h" />
-    <ClInclude Include="VMT.h" />
-    <ClInclude Include="Window.h" />
+    <ClInclude Include="Src\Software\Interface\DirectX9.h" />
+    <ClInclude Include="Src\Framework.h" />
+    <ClInclude Include="Src\Software\Libraries\Game.h" />
+    <ClInclude Include="Src\Software\Interface\GDI.h" />
+    <ClInclude Include="Src\Software\Libraries\Hardware.h" />
+    <ClInclude Include="Src\Software\Included.h" />
+    <ClInclude Include="Src\Software\Libraries\Interface.h" />
+    <ClInclude Include="Src\Software\Hardware\Keyboard.h" />
+    <ClInclude Include="Src\Software\Libraries\Memory.h" />
+    <ClInclude Include="Src\Software\Memory\Module.h" />
+    <ClInclude Include="Src\Software\Hardware\Mouse.h" />
+    <ClInclude Include="Src\Software\Process.h" />
+    <ClInclude Include="Src\Software\Libraries\Software.h" />
+    <ClInclude Include="Src\Software\Memory\VMT.h" />
+    <ClInclude Include="Src\Software\Interface\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

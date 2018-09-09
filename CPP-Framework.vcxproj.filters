@@ -48,82 +48,82 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="Src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VMT.cpp">
+    <ClCompile Include="Src\Software\Interface\DirectX9.cpp">
+      <Filter>Source Files\Software\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Software\Interface\GDI.cpp">
+      <Filter>Source Files\Software\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Software\Interface\Window.cpp">
+      <Filter>Source Files\Software\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Software\Memory\VMT.cpp">
       <Filter>Source Files\Software\Memory</Filter>
     </ClCompile>
-    <ClCompile Include="Keyboard.cpp">
+    <ClCompile Include="Src\Software\Memory\Module.cpp">
+      <Filter>Source Files\Software\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Software\Hardware\Mouse.cpp">
       <Filter>Source Files\Software\Hardware</Filter>
     </ClCompile>
-    <ClCompile Include="Mouse.cpp">
+    <ClCompile Include="Src\Software\Hardware\Keyboard.cpp">
       <Filter>Source Files\Software\Hardware</Filter>
     </ClCompile>
-    <ClCompile Include="DirectX9.cpp">
-      <Filter>Source Files\Software\Interface</Filter>
-    </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>Source Files\Software\Interface</Filter>
-    </ClCompile>
-    <ClCompile Include="GDI.cpp">
-      <Filter>Source Files\Software\Interface</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
+    <ClCompile Include="Src\Software\Libraries\Game.cpp">
       <Filter>Source Files\Software\Libraries</Filter>
     </ClCompile>
-    <ClCompile Include="Module.cpp">
-      <Filter>Source Files\Software\Memory</Filter>
-    </ClCompile>
-    <ClCompile Include="Process.cpp">
+    <ClCompile Include="Src\Software\Process.cpp">
       <Filter>Source Files\Software</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Keyboard.h">
-      <Filter>Header Files\Software\Hardware</Filter>
-    </ClInclude>
-    <ClInclude Include="Mouse.h">
-      <Filter>Header Files\Software\Hardware</Filter>
-    </ClInclude>
-    <ClInclude Include="GDI.h">
-      <Filter>Header Files\Software\Interface</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectX9.h">
-      <Filter>Header Files\Software\Interface</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files\Software\Libraries</Filter>
-    </ClInclude>
-    <ClInclude Include="Hardware.h">
-      <Filter>Header Files\Software\Libraries</Filter>
-    </ClInclude>
-    <ClInclude Include="Interface.h">
-      <Filter>Header Files\Software\Libraries</Filter>
-    </ClInclude>
-    <ClInclude Include="Window.h">
-      <Filter>Header Files\Software\Interface</Filter>
-    </ClInclude>
-    <ClInclude Include="Included.h">
-      <Filter>Header Files\Software</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework.h">
+    <ClInclude Include="Src\Framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VMT.h">
-      <Filter>Header Files\Software\Memory</Filter>
-    </ClInclude>
-    <ClInclude Include="Module.h">
-      <Filter>Header Files\Software\Memory</Filter>
-    </ClInclude>
-    <ClInclude Include="Software.h">
+    <ClInclude Include="Src\Software\Libraries\Hardware.h">
       <Filter>Header Files\Software\Libraries</Filter>
     </ClInclude>
-    <ClInclude Include="Process.h">
+    <ClInclude Include="Src\Software\Hardware\Keyboard.h">
+      <Filter>Header Files\Software\Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Software\Hardware\Mouse.h">
+      <Filter>Header Files\Software\Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Software\Interface\GDI.h">
+      <Filter>Header Files\Software\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Software\Interface\DirectX9.h">
+      <Filter>Header Files\Software\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Software\Interface\Window.h">
+      <Filter>Header Files\Software\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Software\Libraries\Game.h">
+      <Filter>Header Files\Software\Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Software\Libraries\Interface.h">
+      <Filter>Header Files\Software\Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Software\Libraries\Memory.h">
+      <Filter>Header Files\Software\Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Software\Libraries\Software.h">
+      <Filter>Header Files\Software\Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Software\Memory\Module.h">
+      <Filter>Header Files\Software\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Software\Memory\VMT.h">
+      <Filter>Header Files\Software\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Software\Process.h">
       <Filter>Header Files\Software</Filter>
     </ClInclude>
-    <ClInclude Include="Memory.h">
-      <Filter>Header Files\Software\Libraries</Filter>
+    <ClInclude Include="Src\Software\Included.h">
+      <Filter>Header Files\Software</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
