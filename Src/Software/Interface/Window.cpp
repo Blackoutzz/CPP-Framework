@@ -4,10 +4,10 @@ namespace Software
 {
 	namespace Interface
 	{
-		Window::Window(string Name)
+		Window::Window(const char * Name)
 		{
 			this->Name = Name;
-			this->Margin = { 0, 0, 22, 0 };
+			this->Margin = { 0, 22, 0, 0 };
 			this->Handle = FindWindow(0, (LPSTR)this->Name.c_str());
 		}
 
@@ -15,23 +15,17 @@ namespace Software
 		{
 			if (this->Handle != NULL)
 			{
-				this->Alive = true;
+				return true;
 			}
-			else {
-				this->Alive = false;
-			}
-			return this->Alive;
+			return false;
 		}
 
 		bool Window::IsActive()
 		{
 			if (GetForegroundWindow() == this->Handle) {
-				this->Active = true;
+				return true;
 			}
-			else {
-				this->Active = false;
-			}
-			return this->Active;
+			return false;
 		}
 
 		string Window::GetName()
@@ -148,5 +142,63 @@ namespace Software
 			GetWindowRect(this->Handle, &this->Rectangle);
 			return Rect(this->Rectangle.left, this->Rectangle.top, this->GetWidth(), this->GetHeight());
 		}
+
+		bool Window::Screenshot()
+		{
+			HDC DeviceContext = this->GetDeviceContext();
+			HDC CompatibleDeviceContext = CreateCompatibleDC(DeviceContext);
+			HBITMAP BitmapHandle = CreateCompatibleBitmap(DeviceContext, this->GetWidth(), this->GetHeight()-22);
+			HGDIOBJ GDIHandleObject = SelectObject(CompatibleDeviceContext, BitmapHandle);
+			BitBlt(CompatibleDeviceContext, 0,-22, this->GetWidth()-4, this->GetHeight()+22, DeviceContext, 4, 4, SRCCOPY);
+			SelectObject(CompatibleDeviceContext, GDIHandleObject);
+			DeleteDC(CompatibleDeviceContext);
+			ReleaseDC(this->Handle, DeviceContext);
+			return this->SaveBitmapToFile(BitmapHandle);
+		}
+
+		bool Window::SaveBitmapToFile(HBITMAP BitmapHandle, const char * Filepath)
+		{
+			PICTDESC PictureDescription = { sizeof(PictureDescription), PICTYPE_BITMAP };
+			PictureDescription.bmp.hbitmap = BitmapHandle;
+
+			CComPtr<IPicture> Picture = NULL;
+			CComPtr<IStream>  Stream = NULL;
+			LONG Size = 0;
+
+			BOOL ResourceAccess = FALSE;
+
+			ResourceAccess = SUCCEEDED(CreateStreamOnHGlobal(NULL, TRUE, &Stream));
+			ResourceAccess = SUCCEEDED(OleCreatePictureIndirect(&PictureDescription, IID_IPicture, TRUE, (void**)&Picture));
+			ResourceAccess = SUCCEEDED(Picture->SaveAsFile(Stream, TRUE, &Size));
+
+			if (ResourceAccess)
+			{
+				LARGE_INTEGER Offset = { 0 };
+				Stream->Seek(Offset, STREAM_SEEK_SET, NULL);
+				HANDLE FileHandle = CreateFile(Filepath, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, 0, NULL);
+				if (INVALID_HANDLE_VALUE != FileHandle)
+				{
+					DWORD Written = 0, Read = 0, Done = 0;
+					BYTE  DataBuffer[4096];
+					while (Done < Size)
+					{
+						if (SUCCEEDED(Stream->Read(DataBuffer, sizeof(DataBuffer), &Read)))
+						{
+							WriteFile(FileHandle, DataBuffer, Read, &Written, NULL);
+							if (Written != Read) break;
+							Done += Read;
+						}
+						else {
+							break;
+						}
+					}
+					_ASSERTE(Done == Size);
+					CloseHandle(FileHandle);
+					return true;
+				}
+			}
+			return false;
+		}
+
 	}
 }

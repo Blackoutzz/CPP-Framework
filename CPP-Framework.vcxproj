@@ -152,6 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Src\Software\Hardware\Screen.cpp" />
     <ClCompile Include="Src\Software\Interface\DirectX9.cpp" />
     <ClCompile Include="Src\Software\Libraries\Game.cpp" />
     <ClCompile Include="Src\Software\Interface\GDI.cpp" />
@@ -164,6 +165,7 @@
     <ClCompile Include="Src\Software\Interface\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\Software\Hardware\Screen.h" />
     <ClInclude Include="Src\Software\Interface\DirectX9.h" />
     <ClInclude Include="Src\Framework.h" />
     <ClInclude Include="Src\Software\Libraries\Game.h" />

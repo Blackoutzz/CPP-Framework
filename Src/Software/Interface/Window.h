@@ -9,7 +9,7 @@ namespace Software
 		{
 			public:
 
-				Window(string Name);
+				Window(const char * Name);
 
 				RECT GetRectangle();
 
@@ -41,6 +41,8 @@ namespace Software
 
 				Rect GetNewRectangle();
 
+				bool Screenshot();
+
 			protected:
 
 				bool Active;
@@ -64,6 +66,8 @@ namespace Software
 				MARGINS Margin;
 
 				bool FullScreen;
+
+				bool SaveBitmapToFile(HBITMAP BitmapHandle, const char * Filepath = "Screenshots/Screenshot.bmp");
 
 		};
 	}

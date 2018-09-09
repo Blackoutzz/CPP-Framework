@@ -78,6 +78,9 @@
     <ClCompile Include="Src\Software\Process.cpp">
       <Filter>Source Files\Software</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Software\Hardware\Screen.cpp">
+      <Filter>Source Files\Software\Hardware</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Framework.h">
@@ -124,6 +127,9 @@
     </ClInclude>
     <ClInclude Include="Src\Software\Included.h">
       <Filter>Header Files\Software</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Software\Hardware\Screen.h">
+      <Filter>Header Files\Software\Hardware</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

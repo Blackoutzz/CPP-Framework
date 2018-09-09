@@ -35,6 +35,7 @@
 #include "Libraries/Game.h"
 #include <cstdint>
 #include <cstddef>
+#include <atlbase.h>
 
 using namespace Gdiplus;
 using namespace std;
